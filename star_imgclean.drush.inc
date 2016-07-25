@@ -54,7 +54,7 @@ function star_imgclean($content_type, $lang, $field_name) {
 						$verify_mime = preg_match('/image\/(png|jpg|jpeg|gif)/', $mime_type, $mime_match);
 						if ($verify_mime) {
 							echo "doing image ". $count ." for node ". $node->nid . "..\r\n";
-							$new_file = 'sites/default/files/'.$node->nid.'-imgclean-'.$count.'.jpg';
+							$new_file = 'sites/default/files/'.$node->nid.'-imgclean-'.$lang.'-'.$count.'.jpg';
 							$image = imagecreatefromstring($data);
 							imagejpeg($image, $new_file, 50);
 							
