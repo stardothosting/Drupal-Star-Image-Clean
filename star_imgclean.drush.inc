@@ -3,7 +3,7 @@
 function star_imgclean_drush_command() {
 	$currentdate = date('Y_m_d_H_i_s');
 	$items['star-clean'] = array(
-		'description' => 'Clean the body field of a content typeclean',
+		'description' => 'Clean the field of a content type',
 		'aliases' => ['star-cln'],
 		'callback' => 'star_imgclean',
 		'arguments' => array(
@@ -27,7 +27,7 @@ function star_imgclean($content_type, $lang, $field_name) {
 		foreach ($result['node'] as $nid => $row) {
 			echo "doing node " . $node->nid . " , " . $node->title . "..\r\n";
 
-			// TRUE will reset static cache to keep memory usage low
+			// Load the node and assign the specified field to the content variable
 			$node = node_load($row->nid, null, TRUE);
 			$content = $node->{$field_name}[$lang][0]['value'];
 
