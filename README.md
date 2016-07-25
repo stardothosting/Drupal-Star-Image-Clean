@@ -12,9 +12,9 @@ This module was created in conjunction with the [Toronto based web desgin](https
 
 The drush command takes 3 arguments :
 
-###content type
-###lang
-###field
+####content type
+####lang
+####field
 
 An example commmand would be :
 
@@ -22,3 +22,6 @@ An example commmand would be :
 
 Where "page" is the content type name, "en" is the language (if you dont use multi-language, just specify "und") and "body" is the field that needs to be cleaned up.
 
+## Full technical breakdown
+
+You can read our blog post that walks through all parts of this module here : https://www.shift8web.ca/blog/2016/07/speed-drupal-clean-base64-encoded-images/
