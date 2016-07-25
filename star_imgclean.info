@@ -1,0 +1,5 @@
+name = Star Image Data Cleaner 
+description = Scans content fields and cleans up base64 encoded images (from dropping images into WYSIWYG editors). This drush command converts the base64 image to a file and updates the HTML.
+core = 7.x
+php = 5.5
+version = 7.x-1.0
