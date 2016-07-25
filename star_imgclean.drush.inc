@@ -60,7 +60,6 @@ function star_imgclean($content_type, $lang, $field_name) {
 							
 							// Update the img src with DOMDocument
 							$tag->setAttribute('src', '/'.$new_file);
-							var_dump($new_file);
 							$content = $doc->saveHTML();
 						}
 					} else { 
