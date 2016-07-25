@@ -33,7 +33,7 @@ function star_imgclean($content_type, $lang, $field_name) {
 
 			// Load the HTML from the field and parse the img src tags
 			$doc = new DOMDocument();
-			@$doc->loadHTML($content);
+			@$doc->loadHTML('<meta http-equiv="content-type" content="text/html; charset=utf-8">'.$content);
 			$tags = $doc->getElementsByTagName('img');
 			$count = 0;
 
